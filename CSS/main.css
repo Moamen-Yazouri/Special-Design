@@ -10,6 +10,41 @@
     transition: var(--main-transition);
     box-sizing: border-box;
 }
+/* Sections Heading customization */
+.heading-container {
+    max-width: 800px;
+    margin: 20px auto 40px;
+    padding: 0;
+}
+.section-heading {
+    position: relative;
+    font-size: 2.5rem;
+    color: var(--main-color);
+    padding-bottom: 1rem;
+    margin: 0;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.section-heading::before,
+.section-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    width: var(--pseudo-width);
+    transition: width 0.6s ease;
+}
+
+.section-heading::before {
+    left: 50%;
+    background: linear-gradient(90deg, #3498db,var(--main-color));
+}
+.section-heading::after {
+    right: 50%;
+    background: linear-gradient(90deg, var(--main-color), #3498db);
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -237,30 +272,32 @@ body {
         right: 4px;
     }
 }
-.about {
-    display: flex;
+.about-us {
     padding: var(--secttion-padding);
 }
-.about .illustration {
+.about-us .container {
+    display: flex;
+}
+.about-us .container .illustration {
     text-align: center;
     
 }
-.about .illustration img {
+.about-us .container .illustration img {
     width: 350px;
 }
-.about .text {
+.about-us .container .text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex: 1;
 }
-.about .text h2 {
+.about-us .container .text h2 {
     font-weight: bold;
     font-size: 30px;
     color: var(--main-color);
     margin: 0;
 }
-.about .text p {
+.about-us .container .text p {
     line-height: 1.8;
     color: #777;
     margin-top: 10px;
@@ -309,7 +346,6 @@ body {
     transform: translateY(-50%);
     font-size: 18px;
     color: white;
-    font-weight: bold;
     z-index: 2;
 }
 .gallery {
@@ -374,4 +410,231 @@ body {
 }
 .popup-overlay .popup-box .close-btn:hover {
     opacity: 1;
+}
+.timeline {
+    padding: var(--secttion-padding);
+    background-color: #eee;
+    position: relative;
+}
+.timeline .container {
+    position: relative;
+    overflow: hidden;
+}
+.timeline .container::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    background-color: var(--main-color);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+}
+.timeline .container .year {
+    position: relative;
+    margin: 20px auto;
+    font-weight: bold;
+    padding: 5px 2px;
+    width: 50px;
+    color: white;
+    background-color: var(--main-color);
+    z-index: 2;
+    text-align: center;
+    border-radius: 4px;
+}
+.timeline .container .before,
+.timeline .container .after {
+    position: relative;
+    width: calc(50% - 50px);
+    background-color: white;
+    padding: 20px;
+}
+.timeline .container .before {
+    float: left;
+}
+.timeline .container .before::before, 
+.timeline .container .after::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--main-color);
+    background-color: white;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+.timeline .container .before::after, 
+.timeline .container .after::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.timeline .container .before::after {
+    border-color: transparent transparent transparent var(--main-color);
+    right: -20px;
+}
+.timeline .container .after::after {
+    border-color: transparent var(--main-color) transparent transparent;
+    left: -20px;
+} 
+.timeline .container .before::before {
+    right: -63px;
+}
+.timeline .container .after::before {
+    left: -63px;
+}
+.timeline .container .after {
+    float: right;
+}
+
+.timeline .container .date {
+    font-size: 12px;
+    color: #b8b8b8;
+    margin-bottom: 10px;
+
+}
+.timeline .container h2 {
+    margin: 0 0 10px;
+    font-size: 30px;
+    color: var(--main-color);
+}
+.timeline .container p {
+    margin: 0 0 10px;
+    color: #777;
+    line-height: 1.6;
+    font-size: 15px;
+}
+.clear {
+    clear: both;
+}
+.features {
+    padding: 80px 0;
+}
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+.features .feat-box {
+    text-align: center;
+    padding: 10px;
+    border: 3px solid #777;
+    background-color: #eee;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+.features .feat-box:hover {
+    transform: scale(1.1);
+}
+.features .feat-box img {
+    width: 90px;
+    margin: 5px 0;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    padding: 5px;
+    background-color: white;
+}
+.features .feat-box h3 {
+    color: var(--main-color);
+    margin: 0;
+    position: relative;
+}
+.features .feat-box h3::before {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 40px;
+    background-color: var(--main-color);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+}
+.features .feat-box p {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #bab2b2;
+    margin-top: 15px;
+}
+.testimonials {
+    padding: var(--secttion-padding);
+    position: relative;
+}
+.testimonials h2 {
+    margin: 20px 20px 40px;
+    padding: 0;
+    font-size: 35px;
+    color: black;
+}
+.testimonials::before,
+.testimonials::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+}
+.testimonials::before {
+    background-color: var(--main-color);
+    left: 0;
+}
+.testimonials::after {
+    background-color: black;
+    right: 0;
+}
+.testimonials .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+.testimonials .test {
+    position: relative;
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.testimonials .test.active {
+    transform: scale(1.1);
+}
+.testimonials .test > p {
+    color: #777;
+    line-height: 1.5;
+    font-size: 14px;
+    margin: 15px 10px;
+    position: relative;
+    text-align: left;
+}
+.testimonials .test > p::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -14px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+}
+.testimonials .test img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    
+}
+.testimonials .test .person-info h4 {
+    margin:0 0 10px;
+    color: var(--main-color);
+}
+.testimonials .test .person-info > p {
+    font-size: 12px;
+    color: #777;
 }

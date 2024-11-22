@@ -1,3 +1,5 @@
+const sectionsNode = document.body.children;
+const sections = Array.from(sectionsNode);
 const landingPage = document.querySelector(".landing-page");
 const links = document.querySelectorAll(".links li a");
 let arrayOfImages = [];
@@ -110,7 +112,9 @@ if(changBgcState === "active") {
 }
 
 let skillsSection = document.querySelector(".our-skills");
-let skillsBoxes = document.querySelectorAll(".our-skills .skill .progress span")
+let skillsBoxes = document.querySelectorAll(".our-skills .skill .progress span");
+let reached = false;
+
 window.onscroll = () => {
     // section scroll Height
     let secScrollHeight = skillsSection.offsetHeight;
@@ -124,7 +128,8 @@ window.onscroll = () => {
     // Scrolling
     let scrolling = window.scrollY;
 
-    if(scrolling > (secScrollHeight + secOuterHeight) - scrolling) {
+    if(scrolling > (secScrollHeight + secOuterHeight) - visibleScroll && !reached) {
+        reached = true;
         skillsBoxes.forEach(skill => {
             const width = skill.getAttribute("data-progress")
 
@@ -139,8 +144,25 @@ window.onscroll = () => {
             }, 200)
         })
     }
-}   
 
+    sections.forEach((sec) => {
+        if(sec.children !== undefined && sec.children.length > 0) {
+            if(sec.children[0].className === "heading-container") {
+
+                let heading = sec.children[0].children[0];
+                const secHeight = sec.offsetHeight;
+                const secOuterHeight = sec.offsetTop;
+
+                    if(scrolling > ((secOuterHeight + secHeight)/1.8) && !sec.classList.contains("visible")) {
+
+                        heading.style.cssText = "transform: translateY(-20px); --pseudo-width: 50%;"
+
+                    }
+            }
+        }
+    })
+    
+}
 let images = document.querySelectorAll(".gallery .container img");
 
 images.forEach(img => {
@@ -170,6 +192,7 @@ images.forEach(img => {
         popUpBox.appendChild(e.target);
     });
 });
+
 // Close the popUp customization
 document.addEventListener("click", (e) => {
     if(e.target.className === "close-btn") {
@@ -177,5 +200,32 @@ document.addEventListener("click", (e) => {
         over = pop.parentElement;
         over.remove();
     }
-})
+});
+
+// Scale Effect on click for testimonials
+const tests = document.querySelectorAll(".testimonials .test");
+
+tests.forEach(test => {
+
+    test.addEventListener("click", (e) => {
+
+        if(e.currentTarget.classList.contains("active")) {
+
+            e.currentTarget.classList.toggle("active");
+
+        }
+
+        else {
+
+            tests.forEach(test => {
+                test.classList.remove("active");
+            });
+
+            e.currentTarget.classList.add("active");
+        }
+
+    });
+
+});
+
 
