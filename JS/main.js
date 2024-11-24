@@ -300,6 +300,21 @@ if(localStorage.getItem("nav-display")) {
     }
 
 }
+// Reset Settings
+const resetButton = document.querySelector(".reset-button");
+
+resetButton.addEventListener("click", () => {
+    localStorage.clear(); 
+    sessionStorage.setItem("scrollReset", "true"); 
+    window.location.reload(); 
+});
+
+// Reset scroll after reload
+if (sessionStorage.getItem("scrollReset") === "true") {
+    window.scrollTo(0, 0); 
+    sessionStorage.removeItem("scrollReset"); 
+}
+
 // Handle activeation function
 function assignActive (eleList, el) {
 
