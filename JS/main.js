@@ -13,18 +13,17 @@ for(let i = 1; i < 5; i++) {
 activationOnHover(links);
 
 function activationOnHover (links) {
+    
     for (const link of links) {
+
         link.addEventListener("click", () => {
 
-            links.forEach(link => {
-                if(link.classList.contains("active")) {
-                    link.classList.remove("active")
-                }
-            });
-
-            link.classList.add("active")
+            assignActive(links, link);
+            removeActivation(Bullets);
+            
         });
     }
+    
 }
 
 const settingsBox = document.querySelector(".settings-box");
@@ -55,14 +54,9 @@ if(colorItem) {
 colorsList.forEach(li => {
 
     li.addEventListener("click", (e) => {
-        colorsList.forEach(li => {
-            if(li.classList.contains("active")) {
-                li.classList.remove("active");
-                localStorage.removeItem("color");
-            }
-        });
 
-        e.currentTarget.classList.add("active");
+        assignActive(colorsList, e.currentTarget);
+
         document.documentElement.style.setProperty("--main-color", e.currentTarget.dataset.color);
         localStorage.setItem("color", e.currentTarget.dataset.color)
     });
@@ -217,15 +211,108 @@ tests.forEach(test => {
 
         else {
 
-            tests.forEach(test => {
-                test.classList.remove("active");
-            });
+            assignActive(tests, e.target);
 
-            e.currentTarget.classList.add("active");
         }
 
     });
 
 });
 
+// Bullets Customization
+const Bullets = document.querySelectorAll("nav .bullets");
+
+Bullets.forEach(bul => {
+    bul.addEventListener("click", (e) => {
+
+        if(e.currentTarget.classList.contains("active")) {
+
+            e.currentTarget.classList.remove("active");
+            localStorage.setItem("activated-bullet", "none");
+
+        }
+
+        else {
+            const section = document.querySelector(`.${e.currentTarget.dataset.section}`);
+
+            assignActive(Bullets, e.currentTarget);
+
+            localStorage.setItem("activated-bullet", e.currentTarget.dataset.section);
+    
+            section.scrollIntoView({
+                behavior: "smooth"
+            }); 
+
+        }
+
+    })
+
+})
+
+const bultesOnOff = document.querySelector(".settings-box .box .bullet");
+const nav = document.querySelector("nav");
+
+bultesOnOff.addEventListener("click", (e) => {
+
+    e.currentTarget.classList.toggle("active");
+
+    if(e.currentTarget.classList.contains("active")) {
+
+        nav.style.display = "block";
+        localStorage.setItem("nav-display", "block");
+
+    }
+    
+    else {
+
+        nav.style.display = "none";
+        localStorage.setItem("nav-display", "none");
+
+    }
+
+});
+
+// Local Storage for Bullets
+if(localStorage.getItem("nav-display")) {
+
+    nav.style.display = localStorage.getItem("nav-display");
+
+    if(localStorage.getItem("nav-display") === "none") {
+
+        bultesOnOff.classList.remove("active");
+
+    }
+
+
+    if (localStorage.getItem("activated-bullet") !== "none"){
+
+        document.querySelector(`.${localStorage.getItem("activated-bullet")}`).scrollIntoView({
+            behavior: 'smooth'
+        });
+
+        Bullets.forEach(bul => {
+
+            if(bul.dataset.section === localStorage.getItem("activated-bullet")) {
+                bul.classList.add("active")
+            }
+
+        })
+    }
+
+}
+// Handle activeation function
+function assignActive (eleList, el) {
+
+    eleList.forEach(el => {
+        el.classList.remove("active")
+    })
+
+    el.classList.add("active");
+}
+
+function removeActivation(eleList) {
+    eleList.forEach(el => {
+        el.classList.remove("active");
+    })
+}
 

@@ -35,6 +35,10 @@
                     <h4 class="change-bgc">Change Background</h4>
                     <div class="on-off"></div>
                 </div>
+                <div class="box">
+                    <h4>Navigation Bullets</h4>
+                    <div class="on-off bullet active"></div>
+                </div>
             </div>
         </div>
         <div class="landing-page">
@@ -43,10 +47,12 @@
                 <header>
                     <div class="logo">3*1</div>
                         <ul class="links">
-                            <li><a href="#" class="active">About</a></li>
-                            <li><a href="#">Service</a></li>
-                            <li><a href="#">Products</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#about-us" class="active">About</a></li>
+                            <li><a href="#our-skills">Skills</a></li>
+                            <li><a href="#our-gallery">Gallery</a></li>
+                            <li><a href="#timeline">timeline</a></li>
+                            <li><a href="#features">features</a></li>
+                            <li><a href="#testimonials">testimonials</a></li>
                         </ul>
                 </header>
             </div>
@@ -55,7 +61,7 @@
                 <p> We are <span>Three Palestinian Develpoers</span><br>And our company is your best choice for an awesome Website.</p>
             </div>
         </div>
-        <div class="about-us">
+        <div class="about-us" id="about-us">
             <div class="heading-container">
                 <h2 class="section-heading" style="--pseudo-width: 0%;">About Us</h2>
             </div>
@@ -69,7 +75,7 @@
                     </div>
             </div>
         </div>
-        <div class="our-skills">
+        <div class="our-skills" id="our-skills">
             <div class="heading-container">
                 <h2 class="section-heading" style="--pseudo-width: 0%;">Our Skills</h2>
             </div>
@@ -100,7 +106,7 @@
                 </div>
             </div>
         </div>
-        <div class="gallery">
+        <div class="gallery" id="our-gallery">
             <div class="heading-container">
                 <h2 class="section-heading" style="--pseudo-width: 0%;">Our Gallery</h2>
             </div>
@@ -117,7 +123,7 @@
                 <img src="images/10.jpg" alt="">
             </div>
         </div>
-        <div class="timeline">
+        <div class="timeline" id="timeline">
             <div class="heading-container">
                 <h2 class="section-heading" style="--pseudo-width: 0%;">Time Line</h2>
             </div>
@@ -154,7 +160,7 @@
             </div>
             </div>
         </div>
-        <div class="features">
+        <div class="features" id="features">
             <div class="heading-container">
                 <h2 class="section-heading" style="--pseudo-width: 0%;">Our Features</h2>
             </div>
@@ -197,7 +203,7 @@
                 </div>
             </div>
         </div>
-        <div class="testimonials">
+        <div class="testimonials" id="testimonials">
             <h2>Testimonials</h2>
             <div class="container">
                 <div class="test">
@@ -226,6 +232,29 @@
                 </div>
             </div>
         </div>
+        <nav>
+            <div class="bullets" data-section="landing-page">
+                <div class="tooltip">Landing</div>
+            </div>
+            <div class="bullets" data-section="about-us">
+                <div class="tooltip">About Us</div>
+            </div>
+            <div class="bullets" data-section="our-skills">
+                <div class="tooltip">Our Skills</div>
+            </div>
+            <div class="bullets" data-section="gallery">
+                <div class="tooltip">Our Gallery</div>
+            </div>
+            <div class="bullets" data-section="features">
+                <div class="tooltip">Features</div>
+            </div>
+            <div class="bullets" data-section="timeline">
+                <div class="tooltip">Timeline</div>
+            </div>
+            <div class="bullets" data-section="testimonials">
+                <div class="tooltip">Testimonials</div>
+            </div>
+        </nav>
         <script src="https://kit.fontawesome.com/c200714ac2.js" crossorigin="anonymous"></script>
         <script src="JS/main.js"></script>
     </body>
