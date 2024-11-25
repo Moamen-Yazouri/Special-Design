@@ -630,8 +630,9 @@ body {
     transition: 0.3s;
 }
 @media(max-width: 767px) {
+    
     .features .feat-box {
-        width:400px;
+        max-width: 90%;
         margin: 0 auto;
     }
 }

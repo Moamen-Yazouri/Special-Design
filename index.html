@@ -1,294 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="CSS/normalize.css">
-        <!-- Awesome library -->
-        <link rel="stylesheet" href="CSS/all.min.css">
-        <link rel="stylesheet" href="CSS/all.css">
-        <!-- Font File -->
-        <link rel="stylesheet" href="CSS/fonts.css">
-        <!-- Styling File -->
-        <link rel="stylesheet" href="CSS/main.css">
-        <title>Special Design</title>
-    </head>
 
-    <body>
-        <div class="settings-box">
-            <div class="settings-toggel">
-                <i class="fa fa-gear"></i>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <!-- Awesome library -->
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/all.css">
+    <!-- Font File -->
+    <link rel="stylesheet" href="CSS/fonts.css">
+    <!-- Styling File -->
+    <link rel="stylesheet" href="CSS/main.css">
+    <title>Special Design</title>
+</head>
+
+<body>
+    <div class="settings-box">
+        <div class="settings-toggel">
+            <i class="fa fa-gear"></i>
+        </div>
+        <div class="settings-content">
+            <div class="box">
+                <h4>Colors</h4>
+                <ul class="colors">
+                    <li class="active" data-color="#ffc107"><i class="fas fa-check"></i></li>
+                    <li data-color="#E91E63"><i class="fas fa-check"></i></li>
+                    <li data-color="#009688"><i class="fas fa-check"></i></li>
+                    <li data-color="#f4511e"><i class="fas fa-check"></i></li>
+                    <li data-color="#311b92"><i class="fas fa-check"></i></li>
+                </ul>
             </div>
-            <div class="settings-content">
-                <div class="box">
-                    <h4>Colors</h4>
-                    <ul class="colors">
-                        <li class="active" data-color="#ffc107"><i class="fas fa-check"></i></li>
-                        <li data-color="#E91E63"><i class="fas fa-check"></i></li>
-                        <li data-color="#009688"><i class="fas fa-check" ></i></li>
-                        <li data-color="#f4511e"><i class="fas fa-check"></i></li>
-                        <li data-color="#311b92"><i class="fas fa-check"></i></li>
+            <hr>
+            <div class="box">
+                <h4 class="change-bgc">Change Background</h4>
+                <div class="on-off"></div>
+            </div>
+            <div class="box">
+                <h4>Navigation Bullets</h4>
+                <div class="on-off bullet active"></div>
+            </div>
+            <div class="box">
+                <button class="reset-button">Reset</button>
+            </div>
+        </div>
+    </div>
+    <div class="landing-page">
+        <div class="overlay"></div>
+        <div class="container">
+            <header>
+                <div class="logo">3*1</div>
+                <div class="burger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="links-container">
+                    <ul class="links">
+                        <li><a href="#about-us" class="active">About</a></li>
+                        <li><a href="#our-skills">Skills</a></li>
+                        <li><a href="#our-gallery">Gallery</a></li>
+                        <li><a href="#timeline">Timeline</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact-us">Contact Us</a></li>
                     </ul>
                 </div>
-                <hr>
-                <div class="box">
-                    <h4 class="change-bgc">Change Background</h4>
-                    <div class="on-off"></div>
-                </div>
-                <div class="box">
-                    <h4>Navigation Bullets</h4>
-                    <div class="on-off bullet active"></div>
-                </div>
-                <div class="box">
-                    <button class="reset-button">Reset</button>
-                </div>
+            </header>
+        </div>
+        <div class="indro-txt">
+            <h1>We Are <span>3*1</span> Company</h1>
+            <p> We are <span>Three Palestinian Develpoers</span><br>And our company is your best choice for an awesome
+                Website.</p>
+        </div>
+    </div>
+    <div class="about-us" id="about-us">
+        <div class="heading-container">
+            <h2 class="section-heading" style="--pseudo-width: 0%;">About Us</h2>
+        </div>
+        <div class="container">
+            <div class="text">
+                <h2>About us</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut exercitationem id cum, molestiae
+                    voluptate minima? Minima veniam quidem debitis, quod earum voluptatem iusto nisi, obcaecati at,
+                    blanditiis quasi minus eveniet.</p>
+            </div>
+            <div class="illustration">
+                <img src="images/about-us.jpg" alt="">
             </div>
         </div>
-        <div class="landing-page">
-            <div class="overlay"></div>
-            <div class="container">
-                <header>
-                    <div class="logo">3*1</div>
-                    <div class="burger-icon">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="links-container">
-                        <ul class="links">
-                            <li><a href="#about-us" class="active">About</a></li>
-                            <li><a href="#our-skills">Skills</a></li>
-                            <li><a href="#our-gallery">Gallery</a></li>
-                            <li><a href="#timeline">Timeline</a></li>
-                            <li><a href="#features">Features</a></li>
-                            <li><a href="#testimonials">Testimonials</a></li>
-                            <li><a href="#contact-us">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </header>
+    </div>
+    <div class="our-skills" id="our-skills">
+        <div class="heading-container">
+            <h2 class="section-heading" style="--pseudo-width: 0%;">Our Skills</h2>
+        </div>
+        <div class="container">
+            <div class="skill">
+                <div class="name">UI & UX Design</div>
+                <div class="progress" style="--percent-dist: calc(85% - 50px)"><span data-progress="85%"></span></div>
             </div>
-            <div class="indro-txt">
-                <h1>We Are <span>3*1</span> Company</h1>
-                <p> We are <span>Three Palestinian Develpoers</span><br>And our company is your best choice for an awesome Website.</p>
+            <div class="skill">
+                <div class="name">HTML</div>
+                <div class="progress" style="--percent-dist: calc(100% - 60px)"><span data-progress="100%"></span></div>
+            </div>
+            <div class="skill">
+                <div class="name">CSS with Tailwind</div>
+                <div class="progress" style="--percent-dist: calc(90% - 50px)"><span data-progress="90%"></span></div>
+            </div>
+            <div class="skill">
+                <div class="name">JavaScript</div>
+                <div class="progress" style="--percent-dist: calc(87% - 50px)"><span data-progress="87%"></span></div>
+            </div>
+            <div class="skill">
+                <div class="name">TypeScript</div>
+                <div class="progress" style="--percent-dist: calc(80% - 50px)"><span data-progress="80%"></span></div>
+            </div>
+            <div class="skill">
+                <div class="name">PHP-Laravel</div>
+                <div class="progress" style="--percent-dist: calc(95% - 50px)"><span data-progress="95%"></span></div>
             </div>
         </div>
-        <div class="about-us" id="about-us">
-            <div class="heading-container">
-                <h2 class="section-heading" style="--pseudo-width: 0%;">About Us</h2>
-            </div>
-            <div class="container">
-                    <div class="text">
-                        <h2>About us</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut exercitationem id cum, molestiae voluptate minima? Minima veniam quidem debitis, quod earum voluptatem iusto nisi, obcaecati at, blanditiis quasi minus eveniet.</p>
-                    </div>
-                    <div class="illustration">
-                        <img src="images/about-us.jpg" alt="">
-                    </div>
-            </div>
+    </div>
+
+    <div class="gallery" id="our-gallery">
+        <div class="heading-container">
+            <h2 class="section-heading" style="--pseudo-width: 0%;">Our Gallery</h2>
         </div>
-        <div class="our-skills" id="our-skills">
-            <div class="heading-container">
-                <h2 class="section-heading" style="--pseudo-width: 0%;">Our Skills</h2>
-            </div>
-            <div class="container">
-                <div class="skill">
-                    <div class="name">UI & UX Design</div>
-                    <div class="progress" style="--percent-dist: calc(85% - 50px)"><span data-progress = "85%"></span></div>
-                </div>
-                <div class="skill">
-                    <div class="name">HTML</div>
-                    <div class="progress" style="--percent-dist: calc(100% - 60px)"><span data-progress = "100%"></span></div>
-                </div>
-                <div class="skill">
-                    <div class="name">CSS with Tailwind</div>
-                    <div class="progress" style="--percent-dist: calc(90% - 50px)"><span data-progress = "90%"></span></div>
-                </div>
-                <div class="skill">
-                    <div class="name">JavaScript</div>
-                    <div class="progress" style="--percent-dist: calc(87% - 50px)"><span data-progress = "87%"></span></div>
-                </div>
-                <div class="skill">
-                    <div class="name">TypeScript</div>
-                    <div class="progress" style="--percent-dist: calc(80% - 50px)"><span data-progress = "80%"></span></div>
-                </div>
-                <div class="skill">
-                    <div class="name">PHP-Laravel</div>
-                    <div class="progress" style="--percent-dist: calc(95% - 50px)"><span data-progress = "95%"></span></div>
-                </div>
-            </div>
+        <div class="container">
+            <img src="images/01.jpg" alt="Image One">
+            <img src="images/02.jpg" alt="">
+            <img src="images/03.jpg" alt="">
+            <img src="images/04.jpg" alt="">
+            <img src="images/05.jpg" alt="">
+            <img src="images/06.png" alt="">
+            <img src="images/07.jpg" alt="">
+            <img src="images/08.jpg" alt="">
+            <img src="images/09.jpg" alt="">
+            <img src="images/10.jpg" alt="">
         </div>
-        <div class="gallery" id="our-gallery">
-            <div class="heading-container">
-                <h2 class="section-heading" style="--pseudo-width: 0%;">Our Gallery</h2>
-            </div>
-            <div class="container">
-                <img src="images/01.jpg" alt="Image One">
-                <img src="images/02.jpg" alt="">
-                <img src="images/03.jpg" alt="">
-                <img src="images/04.jpg" alt="">
-                <img src="images/05.jpg" alt="">
-                <img src="images/06.png" alt="">
-                <img src="images/07.jpg" alt="">
-                <img src="images/08.jpg" alt="">
-                <img src="images/09.jpg" alt="">
-                <img src="images/10.jpg" alt="">
-            </div>
+    </div>
+
+    <div class="timeline" id="timeline">
+        <div class="heading-container">
+            <h2 class="section-heading" style="--pseudo-width: 0%;">Time Line</h2>
         </div>
-        <div class="timeline" id="timeline">
-            <div class="heading-container">
-                <h2 class="section-heading" style="--pseudo-width: 0%;">Time Line</h2>
-            </div>
-            <div class="container">
-                <div class="year">2022</div>
-                <div class="before">
-                    <div class="date">Septemper 2022</div>
-                    <h2>Before</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur laborum adipisci quas facilis maxime! Nam inventore
+        <div class="container">
+            <div class="year">2022</div>
+            <div class="before">
+                <div class="date">Septemper 2022</div>
+                <h2>Before</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur laborum adipisci quas facilis
+                    maxime! Nam inventore
                     officia doloribus repellendus atque assumenda distinctio eos, animi nulla?</p>
-                </div>
-                <div class="clear"></div>
-                <div class="after">
-                    <div class="date">Septemper 2023</div>
-                    <h2>After</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur laborum adipisci quas facilis maxime! Nam inventore
+            </div>
+            <div class="clear"></div>
+            <div class="after">
+                <div class="date">Septemper 2023</div>
+                <h2>After</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur laborum adipisci quas facilis
+                    maxime! Nam inventore
                     officia doloribus repellendus atque assumenda distinctio eos, animi nulla?</p>
-                </div>
-                <div class="clear"></div>
-                <div class="year">2022</div>
-                <div class="before">
-                    <div class="date">Septemper 2022</div>
-                    <h2>Before</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur laborum adipisci quas facilis maxime! Nam inventore
+            </div>
+            <div class="clear"></div>
+            <div class="year">2022</div>
+            <div class="before">
+                <div class="date">Septemper 2022</div>
+                <h2>Before</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur laborum adipisci quas facilis
+                    maxime! Nam inventore
                     officia doloribus repellendus atque assumenda distinctio eos, animi nulla?</p>
-                </div>
-                <div class="clear"></div>
-                <div class="after">
-                    <div class="date">Septemper 2023</div>
-                    <h2>After</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur laborum adipisci quas facilis maxime! Nam inventore
+            </div>
+            <div class="clear"></div>
+            <div class="after">
+                <div class="date">Septemper 2023</div>
+                <h2>After</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur laborum adipisci quas facilis
+                    maxime! Nam inventore
                     officia doloribus repellendus atque assumenda distinctio eos, animi nulla?</p>
-                </div>
-            </div>
             </div>
         </div>
-        <div class="features" id="features">
-            <div class="heading-container">
-                <h2 class="section-heading" style="--pseudo-width: 0%;">Our Features</h2>
+    </div>
+    <div class="features" id="features">
+        <div class="heading-container">
+            <h2 class="section-heading" style="--pseudo-width: 0%;">Our Features</h2>
+        </div>
+        <div class="container">
+            <div class="feat-box">
+                <img src="images/Icon_01.png" alt="">
+                <h3>Designing</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Fugiat facilis molestiae vel obcaecati voluptates modi ab qui nesciunt similique magnam.</p>
             </div>
-            <div class="container">
-                <div class="feat-box">
-                    <img src="images/Icon_01.png" alt="">
-                    <h3>Designing</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <div class="feat-box">
+                <img src="images/Icon_02.png" alt="">
+                <h3>Designing</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Fugiat facilis molestiae vel obcaecati voluptates modi ab qui nesciunt similique magnam.</p>
-                </div>
-                <div class="feat-box">
-                    <img src="images/Icon_02.png" alt="">
-                    <h3>Designing</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+            <div class="feat-box">
+                <img src="images/Icon_03.png" alt="">
+                <h3>Designing</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Fugiat facilis molestiae vel obcaecati voluptates modi ab qui nesciunt similique magnam.</p>
-                </div>
-                <div class="feat-box">
-                    <img src="images/Icon_03.png" alt="">
-                    <h3>Designing</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+            <div class="feat-box">
+                <img src="images/Icon_04.png" alt="">
+                <h3>Designing</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Fugiat facilis molestiae vel obcaecati voluptates modi ab qui nesciunt similique magnam.</p>
-                </div>
-                <div class="feat-box">
-                    <img src="images/Icon_04.png" alt="">
-                    <h3>Designing</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+            <div class="feat-box">
+                <img src="images/Icon_05.png" alt="">
+                <h3>Designing</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Fugiat facilis molestiae vel obcaecati voluptates modi ab qui nesciunt similique magnam.</p>
-                </div>
-                <div class="feat-box">
-                    <img src="images/Icon_05.png" alt="">
-                    <h3>Designing</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+            <div class="feat-box">
+                <img src="images/Icon_02.png" alt="">
+                <h3>Designing</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Fugiat facilis molestiae vel obcaecati voluptates modi ab qui nesciunt similique magnam.</p>
-                </div>
-                <div class="feat-box">
-                    <img src="images/Icon_02.png" alt="">
-                    <h3>Designing</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Fugiat facilis molestiae vel obcaecati voluptates modi ab qui nesciunt similique magnam.</p>
-                </div>
             </div>
         </div>
-        <div class="testimonials" id="testimonials">
-            <h2>Testimonials</h2>
-            <div class="container">
-                <div class="test">
-                    <p>I am Very Happy, it was a great experience and i will do it again certainly</p>
-                    <img src="images/avatar-04.png" alt="">
-                    <div class="person-info">
-                        <h4>Moamen Al-Yazouri</h4>
-                        <p>Front-End Developer</p>
-                    </div>
+    </div>
+    <div class="testimonials" id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="container">
+            <div class="test">
+                <p>I am Very Happy, it was a great experience and i will do it again certainly</p>
+                <img src="images/avatar-04.png" alt="">
+                <div class="person-info">
+                    <h4>Moamen Al-Yazouri</h4>
+                    <p>Front-End Developer</p>
                 </div>
-                <div class="test active">
-                    <p>I am Very Happy, it was a great experience and i will do it again certainly</p>
-                    <img src="images/avatar-03.png" alt="">
-                    <div class="person-info">
-                        <h4>Moamen Al-Yazouri</h4>
-                        <p>Front-End Developer</p>
-                    </div>
+            </div>
+            <div class="test active">
+                <p>I am Very Happy, it was a great experience and i will do it again certainly</p>
+                <img src="images/avatar-03.png" alt="">
+                <div class="person-info">
+                    <h4>Moamen Al-Yazouri</h4>
+                    <p>Front-End Developer</p>
                 </div>
-                <div class="test">
-                    <p>I am Very Happy, it was a great experience and i will do it again certainly</p>
-                    <img src="images/avatar-05.png" alt="">
-                    <div class="person-info">
-                        <h4>Moamen Al-Yazouri</h4>
-                        <p>Front-End Developer</p>
-                    </div>
+            </div>
+            <div class="test">
+                <p>I am Very Happy, it was a great experience and i will do it again certainly</p>
+                <img src="images/avatar-05.png" alt="">
+                <div class="person-info">
+                    <h4>Moamen Al-Yazouri</h4>
+                    <p>Front-End Developer</p>
                 </div>
             </div>
         </div>
-        <nav>
-            <div class="bullets" data-section="landing-page">
-                <div class="tooltip">Landing</div>
-            </div>
-            <div class="bullets" data-section="about-us">
-                <div class="tooltip">About Us</div>
-            </div>
-            <div class="bullets" data-section="our-skills">
-                <div class="tooltip">Our Skills</div>
-            </div>
-            <div class="bullets" data-section="gallery">
-                <div class="tooltip">Our Gallery</div>
-            </div>
-            <div class="bullets" data-section="features">
-                <div class="tooltip">Features</div>
-            </div>
-            <div class="bullets" data-section="timeline">
-                <div class="tooltip">Timeline</div>
-            </div>
-            <div class="bullets" data-section="testimonials">
-                <div class="tooltip">Testimonials</div>
-            </div>
-            <div class="bullets" data-section="contact-us">
-                <div class="tooltip">Contact Us</div>
-            </div>
-        </nav>
-        <div class="contact-us" id="contact-us">
-            <div class="heading-container">
-                <h2 class="section-heading" style="--pseudo-width: 0%;">Contact Us</h2>
-            </div>
-            <div class="container">
-                <form action="">
-                    <div class="details">
-                        <input type="text" placeholder="Your Name" name="username">
-                        <input type="text" placeholder="Your Email" name="email">
-                        <input type="text" placeholder="Your phone" name="phone">
-                        <input type="text" placeholder="Your Subject" name="subject">
-                    </div>
-                    <div class="message">
-                        <textarea name="mesage" placeholder="Your Message"></textarea>
-                        <input type="submit" value="Send">
-                    </div>
-                </form>
-            </div>
+    </div>
+    <nav>
+        <div class="bullets" data-section="landing-page">
+            <div class="tooltip">Landing</div>
         </div>
-        <script src="https://kit.fontawesome.com/c200714ac2.js" crossorigin="anonymous"></script>
-        <script src="JS/main.js"></script>
-    </body>
+        <div class="bullets" data-section="about-us">
+            <div class="tooltip">About Us</div>
+        </div>
+        <div class="bullets" data-section="our-skills">
+            <div class="tooltip">Our Skills</div>
+        </div>
+        <div class="bullets" data-section="gallery">
+            <div class="tooltip">Our Gallery</div>
+        </div>
+        <div class="bullets" data-section="features">
+            <div class="tooltip">Features</div>
+        </div>
+        <div class="bullets" data-section="timeline">
+            <div class="tooltip">Timeline</div>
+        </div>
+        <div class="bullets" data-section="testimonials">
+            <div class="tooltip">Testimonials</div>
+        </div>
+        <div class="bullets" data-section="contact-us">
+            <div class="tooltip">Contact Us</div>
+        </div>
+    </nav>
+    <div class="contact-us" id="contact-us">
+        <div class="heading-container">
+            <h2 class="section-heading" style="--pseudo-width: 0%;">Contact Us</h2>
+        </div>
+        <div class="container">
+            <form action="">
+                <div class="details">
+                    <input type="text" placeholder="Your Name" name="username">
+                    <input type="text" placeholder="Your Email" name="email">
+                    <input type="text" placeholder="Your phone" name="phone">
+                    <input type="text" placeholder="Your Subject" name="subject">
+                </div>
+                <div class="message">
+                    <textarea name="mesage" placeholder="Your Message"></textarea>
+                    <input type="submit" value="Send">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/c200714ac2.js" crossorigin="anonymous"></script>
+    <script src="JS/main.js"></script>
+</body>
+
 </html>
