@@ -211,7 +211,7 @@ tests.forEach(test => {
 
         else {
 
-            assignActive(tests, e.target);
+            assignActive(tests, e.currentTarget);
 
         }
 
@@ -331,3 +331,35 @@ function removeActivation(eleList) {
     })
 }
 
+// Customize The burger icon
+const burgerIcon = document.querySelector(".landing-page .burger-icon");
+const linksContainer = document.querySelector(".landing-page header .links-container");
+const linksLi = document.querySelector(".landing-page header .links-container .links");
+
+burgerIcon.onclick = function(e) {
+
+    e.stopPropagation();
+
+    linksContainer.classList.toggle("open");
+
+    
+
+}
+
+document.addEventListener("click", (e) => {
+
+    e.stopPropagation();
+
+    if( 
+        linksContainer.classList.contains("open") &&
+        e.target !== linksContainer &&
+        e.target !== burgerIcon &&
+        e.target.parentElement !== linksLi && 
+        e.target.parentElement.parentElement !== linksLi
+    ) {
+
+        linksContainer.classList.remove("open");
+
+    }
+
+});

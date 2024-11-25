@@ -71,8 +71,6 @@ body {
         width: 1170px;
     }
 }
-
-
 .landing-page {
     min-height: 100vh;
     position: relative;
@@ -102,33 +100,88 @@ body {
     font-size: 30px;
     color: var(--main-color);
 }
+.landing-page header .links-container {
+    display: block;
+    width: 100%;
+    text-align: right;
+}
 .landing-page header .links {
-    display: flex;
+    display: block;
     flex: 1;
     justify-content: flex-end;
-    padding-right: 20px;
     font-size: 15px;
-} 
-
+}
+.landing-page header .burger-icon {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    cursor: pointer;
+}
+.landing-page header .burger-icon span{
+    display: block;
+    width: 20px;
+    height: 4px;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    background-color: #fff;
+}
 .landing-page header .links > li {
     margin-right: 10px;
+    display: inline-block;
 }
 .landing-page header .links > li a {
     color: #fff;
     text-decoration: none;
 }
-
 .landing-page header .links > li a.active {
     color: var(--main-color);
 }
 
+@media(max-width: 991px) {
+    .landing-page header .links-container {
+        display: none;
+        overflow: hidden;
+    }
+    .landing-page header .burger-icon {
+        display: block;
+    }
+    .landing-page header .links-container.open {
+        display: block;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        text-align: center;
+        border-bottom: 6px solid var(--main-color);
+        border-radius: 5px;
+        transition: var(--main-transition);
+    } 
+    .landing-page header .links > li {
+        display: block;
+        padding: 10px 5px;
+        margin-right: 0;
+    } 
+    .landing-page header .links > li:hover {
+        transform: scale(1.1);
+    } 
+    .landing-page header .links > li:not(:last-child) {
+        margin-bottom: 5px;
+        border-bottom: 1px solid var(--main-color);
+    }
+    .landing-page header .links > li a {
+        color: black;
+    }
+}
 .landing-page .indro-txt {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    z-index: 2;
+    z-index: 1;
     color: #fff;
 }
 .landing-page .indro-txt span {
@@ -138,10 +191,21 @@ body {
     margin: 0;
     font-size: 50px;
 }
+@media(max-width: 767px) {
+    .landing-page .indro-txt h1 {
+        font-size: 40px;
+    }
+}
 .landing-page .indro-txt p {
     line-height: 1.6;
     margin-top: 10px;
     font-size: 20px;
+}
+@media(max-width: 767px) {
+    .landing-page .indro-txt p {
+        line-height: 1.6;
+        font-size: 15px;
+    }
 }
 .settings-box {
     position: fixed;
@@ -287,6 +351,11 @@ body {
 .about-us .container .illustration img {
     width: 350px;
 }
+@media(max-width: 991px) {
+    .about-us .container .illustration img {
+        display: none;
+    }
+}
 .about-us .container .text {
     display: flex;
     flex-direction: column;
@@ -298,6 +367,15 @@ body {
     font-size: 30px;
     color: var(--main-color);
     margin: 0;
+}
+@media(max-width:767px) {
+    .about-us .container .text h2 {
+        font-size: 25px;
+    }
+    .about-us .container .text p {
+        line-height: 1.7;
+        font-size: 15px;
+    }
 }
 .about-us .container .text p {
     line-height: 1.8;
@@ -321,6 +399,11 @@ body {
     margin-right: 10px;
     width: 150px;
     font-weight: bold;
+}
+@media(max-width:767px) { 
+    .our-skills .container .skill .name {
+        width: 100px;
+    }
 }
 .our-skills .container .skill .progress {
     flex: 1;
@@ -451,6 +534,12 @@ body {
     background-color: white;
     padding: 20px;
 }
+@media(max-width: 767px) {
+    .timeline .container .before,
+    .timeline .container .after {
+        padding: 10px;
+    }
+}
 .timeline .container .before {
     float: left;
 }
@@ -513,6 +602,14 @@ body {
     line-height: 1.6;
     font-size: 15px;
 }
+@media(max-width: 767px) {
+    .timeline .container p {
+        font-size: 12px;
+    }
+    .timeline .container h2 {
+        font-size: 25px;
+    }
+}
 .clear {
     clear: both;
 }
@@ -531,6 +628,12 @@ body {
     background-color: #eee;
     border-radius: 6px;
     transition: 0.3s;
+}
+@media(max-width: 767px) {
+    .features .feat-box {
+        width:400px;
+        margin: 0 auto;
+    }
 }
 .features .feat-box:hover {
     transform: scale(1.1);
