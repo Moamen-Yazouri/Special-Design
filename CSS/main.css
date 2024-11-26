@@ -100,6 +100,11 @@ body {
     font-size: 30px;
     color: var(--main-color);
 }
+@media(max-width: 767px) {
+    .landing-page header .logo {
+        margin-left: 20px;
+    }
+}
 .landing-page header .links-container {
     display: block;
     width: 100%;
@@ -854,6 +859,11 @@ nav .bullets::before {
     display: flex;
     justify-content: space-between;
 }
+@media(max-width: 767px) {
+    .contact-us form {
+        flex-direction: column;
+    }
+}
 .contact-us form .details, 
 .contact-us form .message {
     flex-basis: 48%;
@@ -903,3 +913,18 @@ nav .bullets::before {
 .contact-us form .message input[type="submit"]:hover {
     opacity: 0.7;
 }
+footer {
+    background-color: black;
+    color: #fff;
+    padding: var(--secttion-padding);
+}
+footer .footer {
+    width: fit-content;
+    font-size: 30px;
+    margin: auto;
+}
+@media(max-width: 767px) {
+    footer .footer {
+        font-size: 20px;
+    }
+} 
